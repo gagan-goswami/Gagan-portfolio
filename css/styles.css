@@ -3407,11 +3407,34 @@ img.u-pull-left {
     align-items : center;
 }
 
+.about-info__pic-block{
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    background: linear-gradient(45deg, #ff00cc23, #3333ff54, #00ffcc88, #ffcc00dc);
+    background-size: 300% 300%;
+    animation: borderAnimation 5s linear infinite;
+    border-radius: 20px;
+}
+
 .about-info__pic {
     object-fit     : cover;
     margin         : 0;
     vertical-align : bottom;
-}
+    display: block;
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+  }
+  
+  @keyframes borderAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+
 
 .about-info__text {
     padding     : var(--vspace-3_5) 10vw var(--vspace-2) 0;
